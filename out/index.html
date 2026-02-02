@@ -87,6 +87,25 @@
             font-size: 1rem;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
+
+        @keyframes scale-pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .pulse-animation {
+            animation: scale-pulse 2s infinite ease-in-out;
+            display: inline-block;
+        }
     </style>
 </head>
 
@@ -99,13 +118,19 @@
             <div class="hero-content" style="max-width: 900px; margin: 0 auto;">
                 <h1 class="hero-title"
                     style="color: #fff; font-size: 2.2rem; line-height: 1.2; margin-bottom: 20px; font-weight: 800; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    Baixe 200 Exercícios terapêuticos para idosos
+                    Protocolo de Reabilitação Neurofuncional: 200 condutas práticas para frear o declínio cognitivo e
+                    motor
                 </h1>
 
                 <p class="hero-subtitle"
-                    style="color: #fff; font-weight: 400; font-size: 1.4rem; margin-bottom: 30px; line-height: 1.4;">
-                    150 Atividades de <span style="font-weight: 700; border-bottom: 2px solid #f59e0b;">Dupla
-                        Tarefa</span> focadas em frear o declínio neurofuncional e superar a recusa ao tratamento.
+                    style="color: #fff; font-weight: 400; font-size: 1.4rem; margin-bottom: 20px; line-height: 1.4;">
+                    O acervo completo de atividades prontas para imprimir e aplicar, focado em acelerar a reabilitação
+                    motora e cognitiva sem que você precise gastar horas planejando cada sessão.
+                </p>
+
+                <p
+                    style="color: #f59e0b; font-weight: 800; font-size: 1.1rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;">
+                    Veja o produto por dentro :
                 </p>
 
                 <!-- Imagem do Produto Principal Atualizada -->
@@ -269,11 +294,12 @@
     <!-- Nova Seção: Bônus Exclusivos -->
     <section class="bonus-section" style="padding: 60px 0; background: #fff;">
         <div class="container">
-            <h2 class="section-title" style="color: #000; margin-bottom: 30px;">
-                Comprando hoje, você leva <span style="color: #D97706;">3 Bônus Exclusivos</span> para potencializar
+            <h2 class="section-title" style="color: #000; margin-bottom: 30px; font-weight: 400; font-size: 2.3rem;">
+                Comprando hoje, você leva <span style="color: #D97706; font-weight: 600;">3 Bônus Exclusivos</span> para
+                potencializar
                 ainda mais o seu atendimento!
             </h2>
-            <p style="text-align: center; margin-bottom: 50px; font-size: 1.1rem; color: var(--muted-foreground);">
+            <p style="text-align: center; margin-bottom: 50px; font-size: 1.2rem; color: #64748b; font-weight: 400;">
                 Ferramentas de gestão e autoridade que complementam o Acervo Clínico.
             </p>
 
@@ -293,8 +319,7 @@
                         BÔNUS #01</p>
                     <h3
                         style="font-weight: 800; font-size: 1.3rem; margin-bottom: 15px; color: #000; min-height: 3.2rem;">
-                        Kit
-                        de Avaliação<br>Neurofuncional</h3>
+                        Kit de Avaliação<br>Neurofuncional</h3>
                     <p
                         style="color: #64748b; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px; min-height: 4.5rem;">
                         Modelos prontos de anamnese, evolução e escalas validadas. Padronize seus
@@ -391,104 +416,122 @@
 
 
 
-    <section class="pricing-plans" id="plans" style="background: #000; padding: 100px 0; color: #fff;">
+    <!-- Seção de Oferta Única Premium -->
+    <section class="pricing-plans" id="plans" style="background: #0C3355; padding: 100px 0; color: #333;">
         <div class="container">
-            <!-- Cronômetro dos Planos -->
-            <h2 class="section-title" style="color: #fff;">Nossos pacotes:</h2>
-            <div class="plans-grid">
-                <!-- Pacote Básico -->
-                <div class="plan-card basic"
-                    style="text-align: center; background: #111; border: 1px solid #333; color: #fff;">
-                    <h2 class="plan-title-card" style="color: #fff;">Plano Básico</h2>
-                    <div class="price-container-card" style="flex-direction: column; gap: 5px;">
-                        <span class="old-price-card" style="font-size: 1.1rem; color: #94a3b8;">De R$57 por</span>
-                        <span class="new-price-card-basic" style="color: #10b981; font-size: 3.5rem;">R$10,00</span>
-                    </div>
-                    <ul class="plan-features-card" style="margin-top: 20px;">
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> Acervo Clínico (150 Condutas)</li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> Dinâmicas Práticas para Casa</li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> Checklist Segurança Domiciliar</li>
-                        <li><i class="fas fa-check" style="color: #10b981;"></i> Acesso imediato</li>
-                    </ul>
-                    <a href="https://pay.lowify.com.br/checkout?product_id=GF2DPK" class="plan-button-basic-card-new"
-                        id="basic-plan-btn">QUERO O PLANO BÁSICO</a>
+            <div class="offer-card" style="
+                background: #fff;
+                max-width: 650px;
+                margin: 0 auto;
+                border-radius: 20px;
+                border: 2px solid #f59e0b;
+                overflow: hidden;
+                box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+                position: relative;
+            ">
+                <!-- Banner Superior -->
+                <div
+                    style="background: #111827; color: #fff; padding: 18px; text-align: center; font-weight: 500; font-size: 1.25rem; border-bottom: 2px solid #f59e0b;">
+                    ✨ Condição especial válida somente HOJE: <span id="current-date"
+                        style="color: #f59e0b; font-weight: 600;">01/02/2026</span>
                 </div>
 
-                <!-- Pacote Premium -->
-                <div class="plan-card popular"
-                    style="text-align: center; border: 2px solid #f59e0b; background: #080808; color: #fff; transform: scale(1.05); z-index: 10; box-shadow: 0 30px 60px rgba(0,0,0,0.8);">
-                    <div
-                        style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, #f59e0b, #d97706); padding: 5px 20px; border-radius: 20px; font-weight: 900; font-size: 0.8rem; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);">
-                        MAIS POPULAR
-                    </div>
-                    <h2 class="plan-title-card" style="margin-top: 15px; color: #fff;">Plano Premium</h2>
-                    <div class="price-container-card" style="flex-direction: column; gap: 5px;">
-                        <span class="old-price-card" style="font-size: 1.1rem; color: #94a3b8;">De R$127 por</span>
-                        <span class="new-price-card-basic"
-                            style="color: #10b981; font-size: 3.5rem; text-shadow: 0 0 20px rgba(16, 185, 129, 0.2);">R$27,00</span>
-                    </div>
+                <!-- Mockup do Produto -->
+                <div style="padding: 20px 20px 0; text-align: center;">
+                    <img src="attached_assets/mockup_oferta_v2.png"
+                        alt="Protocolo 150 - Protocolo de Reabilitação Neurofuncional" class="pulse-animation"
+                        style="width: 100%; max-width: 360px; height: auto; border-radius: 12px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));">
+                </div>
 
-                    <div class="savings-badge-red"
-                        style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2);">
-                        Economize R$ 100,00
-                    </div>
+                <!-- Lista de Benefícios -->
+                <div style="padding: 20px 50px;">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #f3f4f6; font-weight: 400; font-size: 1.15rem; color: #374151;">
+                            <span><i class="fas fa-check-square" style="color: #10b981; margin-right: 12px;"></i> Acervo
+                                Clínico (150 Condutas)</span>
+                            <span style="color: #ef4444; text-decoration: line-through; font-size: 1rem;">R$
+                                97,00</span>
+                        </li>
+                        <li
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #f3f4f6; font-weight: 400; font-size: 1.15rem; color: #374151;">
+                            <span><i class="fas fa-check-square" style="color: #10b981; margin-right: 12px;"></i> Bônus
+                                1: Kit Avaliação Neurofuncional</span>
+                            <span style="color: #ef4444; text-decoration: line-through; font-size: 1rem;">R$
+                                47,00</span>
+                        </li>
+                        <li
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #f3f4f6; font-weight: 400; font-size: 1.15rem; color: #374151;">
+                            <span><i class="fas fa-check-square" style="color: #10b981; margin-right: 12px;"></i> Bônus
+                                2: Guia de Orientação ao Cuidador</span>
+                            <span style="color: #ef4444; text-decoration: line-through; font-size: 1rem;">R$
+                                67,00</span>
+                        </li>
+                        <li
+                            style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #f3f4f6; font-weight: 400; font-size: 1.15rem; color: #374151;">
+                            <span><i class="fas fa-check-square" style="color: #10b981; margin-right: 12px;"></i> Bônus
+                                3: Checklist Segurança Domiciliar</span>
+                            <span style="color: #ef4444; text-decoration: line-through; font-size: 1rem;">R$
+                                37,00</span>
+                        </li>
+                        <li
+                            style="padding: 15px 0; border-bottom: 1px solid #f3f4f6; font-weight: 400; font-size: 1.15rem; color: #374151;">
+                            <i class="fas fa-check-square" style="color: #10b981; margin-right: 12px;"></i> Comunidade
+                            VIP (Networking)
+                        </li>
+                        <li
+                            style="padding: 15px 0; border-bottom: 1px solid #f3f4f6; font-weight: 400; font-size: 1.15rem; color: #374151;">
+                            <i class="fas fa-check-square" style="color: #10b981; margin-right: 12px;"></i> Acesso
+                            Vitalício + Atualizações
+                        </li>
+                        <li style="padding: 15px 0; font-weight: 600; font-size: 1.15rem; color: #166534;">
+                            <i class="fas fa-check-square" style="color: #10b981; margin-right: 12px;"></i> Acesso
+                            Imediato (E-mail + WhatsApp)
+                        </li>
+                    </ul>
+                </div>
 
-                    <p
-                        style="font-weight: 800; color: #fff; margin: 15px 0; background: rgba(245, 158, 11, 0.1); padding: 8px; border-radius: 8px; border: 1px dashed rgba(245, 158, 11, 0.3);">
-                        Inclui tudo do Plano Básico +
+                <!-- Banner de Alerta -->
+                <div
+                    style="margin: 20px 50px; background: #fffbeb; border: 1px solid #fef3c7; border-radius: 12px; padding: 18px; text-align: center; color: #92400e; font-size: 1.05rem; line-height: 1.5; font-weight: 400;">
+                    Apenas nesta página você garante o <strong>Acervo Completo + Todos os Bônus</strong> com valor
+                    reduzido. Após o prazo, o valor pode voltar para <span style="color: #ef4444; font-weight: 700;">R$
+                        129,00</span>.
+                </div>
+
+                <!-- Preço Final -->
+                <div style="text-align: center; padding: 25px 50px;">
+                    <p style="color: #64748b; font-size: 1.25rem; margin-bottom: 12px; font-weight: 400;">
+                        De <span style="text-decoration: line-through; color: #ef4444; font-weight: 400;">R$
+                            147,00</span> por apenas
                     </p>
+                    <h2 style="color: #15803d; font-size: 5.5rem; font-weight: 700; margin: 0; line-height: 1;">
+                        R$ 47,00
+                    </h2>
+                    <p style="color: #64748b; font-weight: 500; margin-top: 15px; font-size: 1.1rem;">
+                        Pagamento Único • Sem mensalidades
+                    </p>
+                </div>
 
-                    <div class="bonus-block-list">
-                        <!-- Bônus 1 -->
-                        <div class="bonus-block-item" style="background: #111; border-color: #222;">
-                            <div class="bonus-block-text">
-                                <span class="bonus-block-label" style="color: #f59e0b;">BÔNUS 1:</span>
-                                <span class="bonus-block-title" style="color: #fff;">Kit de Avaliação
-                                    Neurofuncional</span>
-                            </div>
-                            <span class="bonus-block-price" style="color: #fca5a5;">R$47,00</span>
-                        </div>
-                        <!-- Bônus 2 -->
-                        <div class="bonus-block-item" style="background: #111; border-color: #222;">
-                            <div class="bonus-block-text">
-                                <span class="bonus-block-label" style="color: #f59e0b;">BÔNUS 2:</span>
-                                <span class="bonus-block-title" style="color: #fff;">Guia de Orientação ao
-                                    Cuidador</span>
-                            </div>
-                            <span class="bonus-block-price" style="color: #fca5a5;">R$67,00</span>
-                        </div>
-                        <!-- Bônus 3 -->
-                        <div class="bonus-block-item" style="background: #111; border-color: #222;">
-                            <div class="bonus-block-text">
-                                <span class="bonus-block-label" style="color: #f59e0b;">BÔNUS 3:</span>
-                                <span class="bonus-block-title" style="color: #fff;">Caderno de Jogos Cognitivos
-                                    Imprimíveis</span>
-                            </div>
-                            <span class="bonus-block-price" style="color: #fca5a5;">R$37,00</span>
-                        </div>
-                        <!-- Extras -->
-                        <div class="bonus-block-item" style="background: #111; border-color: #222;">
-                            <div class="bonus-block-text">
-                                <span class="bonus-block-title" style="color: #fff;">Comunidade VIP (Networking)</span>
-                            </div>
-                        </div>
-                        <div class="bonus-block-item" style="background: #111; border-color: #222;">
-                            <div class="bonus-block-text">
-                                <span class="bonus-block-title" style="color: #fff;">Acesso Vitalício +
-                                    Atualizações</span>
-                            </div>
-                        </div>
-                        <div class="bonus-block-item"
-                            style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4);">
-                            <div class="bonus-block-text">
-                                <span class="bonus-block-title" style="color: #34d399; font-weight: 800;">Acesso
-                                    Imediato (E-mail + WhatsApp)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="https://pay.lowify.com.br/checkout?product_id=qZIzsd" class="plan-button-premium-card-new">
-                        QUERO O PLANO PREMIUM
+                <!-- Botão CTA -->
+                <div style="padding: 0 50px 50px;">
+                    <a href="https://pay.lowify.com.br/checkout?product_id=qZIzsd" style="
+                        background: #10b981;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 15px;
+                        padding: 20px;
+                        border-radius: 50px;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        box-shadow: 0 12px 24px rgba(16, 185, 129, 0.25);
+                        transition: all 0.3s ease;
+                    ">
+                        <i class="fas fa-lock"></i> SIM, QUERO COMPRAR AGORA!
                     </a>
                 </div>
             </div>
